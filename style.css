@@ -32,11 +32,11 @@ main {
 
 h2 {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   margin-bottom: 1.5rem;
   font-family: "Roboto", serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--d_grey);
 }
 
@@ -105,7 +105,7 @@ header {
 /*******ux/ui elementer *******/
 
 .button_container {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 4rem;
   display: flex;
   justify-content: center;
@@ -124,5 +124,10 @@ header {
 .button:hover {
   color: var(--red);
   border-color: var(--red);
+}
+
+.about_bottom {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
 }
 /*******ux/ui elementer *******/

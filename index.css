@@ -70,3 +70,18 @@ img {
   transform: rotate(-20deg); /*roterer teksten */
 }
 /*******Omg mig forside *******/
+
+/***********"Programmer jeg bruger"**********/
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* Kolonner tilpasser sig billedstørrelsen (metode fundet på nettet)*/
+  gap: 35px;
+  justify-content: center; /* Centrerer grid-elementerne horisontalt */
+  align-items: center;
+}
+
+.grid_1-1-1 img {
+  max-width: 70px;
+  height: auto;
+}
+/***********"Programmer jeg bruger"**********/
