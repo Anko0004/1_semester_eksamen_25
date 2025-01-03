@@ -1,0 +1,45 @@
+/*************** Reset *********************/
+img {
+  width: 100%;
+}
+* {
+  margin: 0;
+}
+/*************** Reset ************/
+/*****************Main***********/
+main {
+  background-color: #f0f3ec;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+/*****************Main***********/
+
+/******** Header ********/
+header {
+  display: flex; /*Child elementerne bliver placeres i en række eller kolonne*/
+  padding: 30px; /*højden på headeren*/
+  background-color: #f0f3ec;
+  justify-content: end; /*Child elementerne bliver placeres i enden*/
+}
+
+.menu a {
+  padding: 10px; /*mellemrummet mellem teksten*/
+  color: #343333;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-weight: 300;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 50px;
+}
+/******** Header ********/
