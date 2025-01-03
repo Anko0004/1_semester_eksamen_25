@@ -29,10 +29,27 @@ main {
 /** Farver **/
 
 /***Fonte***/
-
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: var(--d_grey);
+}
 h2 {
   text-align: center;
   margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--d_grey);
+}
+
+h3 {
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-family: "Roboto", serif;
   font-weight: 400;
@@ -137,10 +154,9 @@ header {
 footer {
   width: 100%;
   margin: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
   margin-top: 5rem;
   border-top: 1px solid var(--d_grey); /* Tilføjer linje mellem main og footer */
+  overflow-x: hidden; /* Skjuler eventuel horisontal scroll */
 }
 
 footer a {
@@ -149,6 +165,8 @@ footer a {
   font-size: 1rem;
   color: var(--d_grey);
   text-decoration: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 footer a:hover {
@@ -160,6 +178,8 @@ footer p {
   font-weight: 300;
   font-size: 1rem;
   color: var(--d_grey);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .grid_1-1-1_footer {
