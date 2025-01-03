@@ -72,7 +72,6 @@ header {
   font-family: "Roboto", serif;
   font-weight: 200;
   font-size: 1rem;
-  border: 1px solid transparent;
 }
 
 .menu {
@@ -88,7 +87,6 @@ header {
 }
 .menu a.active {
   color: var(--red);
-  border-color: var(--red);
 }
 /*****Hover på menu*****/
 
