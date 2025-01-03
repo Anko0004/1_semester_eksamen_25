@@ -131,3 +131,48 @@ header {
   margin-bottom: 6rem;
 }
 /*******ux/ui elementer *******/
+
+/**************footer************/
+
+footer {
+  width: 100%;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 5rem;
+  border-top: 1px solid var(--d_grey); /* Tilføjer linje mellem main og footer */
+}
+
+footer a {
+  font-family: "Roboto", serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--d_grey);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--red);
+}
+
+footer p {
+  font-family: "Roboto", serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--d_grey);
+}
+
+.grid_1-1-1_footer {
+  display: grid;
+  gap: 30px;
+}
+
+.mail {
+  margin-top: 2rem;
+}
+
+.sociale_medier {
+  margin-bottom: 2rem;
+}
+
+/**************footer************/
