@@ -9,6 +9,15 @@ img {
 
 /***** Hero image *****/
 .hero_image {
+  position: relative; /* Gør det muligt at positionere elementer inde i containeren */
+  width: 100%; /* Sørger for, at containeren fylder hele bredden */
+  height: auto; /* Justerer højden efter billedet */
+}
+
+.hero_image img {
+  width: 100%; /* Sørger for, at billedet fylder containeren */
+  height: auto; /* Bevarer billedets proportioner */
+  display: block; /* Fjerner uønskede mellemrum omkring billedet */
 }
 
 /***** Hero image ******/

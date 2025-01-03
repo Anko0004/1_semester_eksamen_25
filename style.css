@@ -6,22 +6,38 @@ img {
   margin: 0;
 }
 /*************** Reset ************/
+
+/****Body*****/
+body {
+  background-color: #f0f3ec;
+}
+/****Body*****/
 /*****************Main***********/
 main {
-  background-color: #f0f3ec;
-  padding-left: 1rem;
-  padding-right: 1rem;
   max-width: 1200px;
   margin: auto;
 }
 /*****************Main***********/
-/** farver **/
+/** Farver **/
 :root {
   --background: #f0f3ec;
   --red: #bc1307;
   --d_grey: #343333;
 }
-/** farver **/
+/** Farver **/
+
+/***Fonte***/
+
+h2 {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+  color: var(--d_grey);
+}
+
+/***Fonte***/
 /******** Header ********/
 header {
   display: flex; /*Child elementerne bliver placeres i en række eller kolonne*/
@@ -36,7 +52,7 @@ header {
   text-decoration: none;
   font-family: "Roboto", serif;
   font-weight: 200;
-  font-size: 90%;
+  font-size: 1rem;
 }
 
 .menu {
