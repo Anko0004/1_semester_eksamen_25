@@ -29,9 +29,6 @@ img {
     display: flex;
   }
 }
-/***** portfolio collage*****/
-
-/*******Portfolio text overlay**********/
 
 .billede_collage {
   position: relative; /* For at placere teksten korrekt */
@@ -54,8 +51,13 @@ img {
   font-size: 3rem; /* Større tekst for tallet */
   margin-bottom: 0.5rem;
 }
-
-/*******Portfolio text overlay**********/
+/* Hover-effekt for billede */
+.billede_collage:hover img {
+  filter: blur(0.5px) brightness(50%); /* Slører billedet og reducerer lysstyrken for mørkere effekt */
+  opacity: 0.7; /* Giver en mørkere effekt */
+}
+/* Hover-effekt for billede */
+/***** portfolio collage*****/
 
 /*******Omg mig forside *******/
 
