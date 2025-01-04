@@ -61,7 +61,6 @@ img {
 /***** portfolio collage*****/
 
 /*******Omg mig forside *******/
-
 .billede_med_skraaskrift {
   position: relative; /* For at placere overlayet korrekt */
 }
@@ -71,6 +70,39 @@ img {
   top: 77%;
   left: 36%;
   transform: rotate(-20deg); /*roterer teksten */
+}
+
+@media (min-width: 700px) {
+  .grid_om_mig {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
+    gap: 30px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .om_mig_tekst {
+    text-align: left; /* Fjerner centreret tekst */
+  }
+
+  .om_mig_tekst h2 {
+    text-align: left; /* H2 justeres til venstre */
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .about_bottom {
+    display: flex;
+    justify-content: flex-start; /* Venstrejusterer knappen */
+    padding-left: 5rem;
+    padding-right: 4rem;
+    margin-top: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }
 /*******Omg mig forside *******/
 
