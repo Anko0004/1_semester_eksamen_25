@@ -118,7 +118,13 @@ header {
   position: absolute;
   top: 16px;
   left: 10px;
-  width: 60px;
+}
+
+.logo a {
+  font-family: "League Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
 }
 /***Logo***/
 
