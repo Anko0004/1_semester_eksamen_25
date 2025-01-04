@@ -1,0 +1,101 @@
+/*******Portfolio grid*******/
+.grid_tema2,
+.grid_tema3,
+.grid_tema4,
+.grid_tema5 {
+  margin-top: 3rem;
+}
+
+.grid_tema4_billeder1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.grid_tema4_billeder2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/*******Button*********/
+@media (min-width: 700px) {
+  .button_container {
+    display: flex;
+    justify-content: flex-start; /* Venstrejusterer på store skærme */
+    padding-left: 5rem;
+    padding-right: 4rem;
+    max-width: 900px;
+    margin: 0 auto; /* Centrerer containeren horisontalt */
+    margin-bottom: 5rem;
+  }
+}
+/*******Button*********/
+
+/*Tema2*/
+@media (min-width: 700px) {
+  .grid_tema2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
+    gap: 30px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 8rem;
+  }
+}
+
+/*Tema3*/
+@media (min-width: 700px) {
+  .grid_tema3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
+    gap: 30px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 8rem;
+  }
+}
+
+/*Tema4*/
+@media (min-width: 700px) {
+  .grid_tema4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 8rem;
+  }
+}
+
+/*Tema5*/
+@media (min-width: 700px) {
+  .grid_tema5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 8rem;
+  }
+}
+
+.tekst2_tema5 {
+  grid-column: 2; /* Placeres i kolonne 2 */
+  grid-row: 2; /* 2. række */
+}
+
+.billede2_tema5 {
+  grid-column: 1; /* Placeres i kolonne 1 */
+  grid-row: 2; /* 2. række */
+}
+
+/*******Portfolio grid*******/
