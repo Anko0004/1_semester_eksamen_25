@@ -10,7 +10,7 @@ img {
 /***** Hero image *****/
 .hero_image {
   position: relative; /* Gør det muligt at positionere elementer inde i containeren */
-  height: auto;
+  height: 70vh;
 }
 /***** Hero image ******/
 
