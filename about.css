@@ -1,9 +1,11 @@
-.grid_om_mig_3 {
-  display: grid;
-  margin-top: 5rem;
-  gap: 30px;
-  grid-template-columns: 1fr;
+/*************** Reset *********************/
+img {
+  width: 100%;
 }
+* {
+  margin: 0;
+}
+/*************** Reset ************/
 
 .haandskrift_2 {
   font-family: "League Script", serif;
@@ -12,25 +14,7 @@
   font-size: 1.5rem;
 }
 
-.programmer_about {
-  margin-top: 5rem;
-  text-align: center;
-}
-
-.grid_programmer {
-  margin-top: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.grid_programmer img {
-  max-width: 60px;
-  height: 60px;
-  object-fit: contain; /* Sikrer, at billedet bevarer sine proportioner inden for boksen */
-}
-
-/*******About grid*******/
-
+/**** Hvem er jeg****/
 @media (min-width: 800px) {
   .grid_om_mig_2 {
     display: grid;
@@ -43,7 +27,55 @@
     margin-top: 5rem;
   }
 }
+/**** Hvem er jeg****/
 
+/*******CV********/
+
+.cv_h2 {
+  margin: 0 auto; /* Centerer indholdet */
+  padding-left: 5rem;
+  padding-right: 5rem;
+  max-width: 900px;
+  margin-top: 7rem;
+}
+
+.cv li {
+  font-family: "Roboto", serif;
+  font-weight: 200;
+  font-size: 0.8rem; /*Jeg har valgt lidt mindre skrift, da det visuelt er pænere*/
+  color: var(--d_grey);
+  line-height: 1.5; /* Gør linjehøjden som i afsnit */
+}
+
+.cv {
+  margin: 0 auto; /* Centerer indholdet */
+  margin-top: 0.5rem;
+  margin-bottom: 5rem;
+  padding: 3rem 5rem;
+  border: 1px solid var(--d_grey); /* Tilføjer en firkantet kant */
+  box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde/højde */
+  max-width: 900px;
+}
+
+@media (min-width: 800px) {
+  .cv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 40px;
+    align-items: start; /* Justerer indholdet til starten af hver kolonne */
+  }
+}
+/*******CV********/
+
+/*********billede collage*****/
+/****mobil site***/
+.grid_om_mig_3 {
+  display: grid;
+  margin-top: 5rem;
+  gap: 30px;
+  grid-template-columns: 1fr;
+}
+/****mobil site***/
 @media (min-width: 800px) {
   .grid_om_mig_3 {
     display: grid;
@@ -53,7 +85,7 @@
     padding-right: 5rem;
     max-width: 900px;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 7rem;
   }
 }
 /*********Tape*********/
@@ -82,10 +114,26 @@
   height: auto;
 }
 /*********Tape*********/
-
-/*******About grid*******/
+/*********billede collage*****/
 
 /****Programmer grid******/
+.programmer_about {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  text-align: center;
+}
+
+.grid_programmer {
+  margin-top: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.grid_programmer img {
+  max-width: 60px;
+  height: 60px;
+  object-fit: contain; /* Sikrer, at billedet bevarer sine proportioner inden for boksen */
+}
 
 @media (min-width: 800px) {
   .grid_programmer {
@@ -95,3 +143,4 @@
     align-items: start; /* Justerer indholdet til starten af hver kolonne */
   }
 }
+/****Programmer grid******/

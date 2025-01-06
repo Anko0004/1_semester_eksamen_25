@@ -136,11 +136,10 @@ header {
 }
 
 /***Logo***/
-
 /******** Header ********/
 
 /*******Ux/ui elementer *******/
-/*Generalt knap:*/
+/*General knap:*/
 .button_container {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -162,18 +161,17 @@ header {
   color: var(--red);
   border-color: var(--red);
 }
-/*Generalt knap:*/
-
+/*General knap:*/
 /*******ux/ui elementer *******/
 
 /**************footer************/
-
 footer {
   width: 100%;
   margin: 0;
   margin-top: 5rem;
   border-top: 1px solid var(--d_grey); /* Tilføjer linje mellem main og footer */
   overflow-x: hidden; /* Skjuler eventuel horisontal scroll */
+  position: relative; /* For at logoet kan placeres absolut i forhold til footeren */
 }
 
 footer a {
@@ -212,4 +210,19 @@ footer p {
   margin-bottom: 2rem;
 }
 
+/*** Logo i Footer ***/
+.logo_footer {
+  position: absolute;
+  bottom: 30px; /* Placerer logoet 16px fra bunden */
+  right: 30px; /* Placerer logoet 10px fra højre */
+}
+
+.logo_footer a {
+  font-family: "League Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+  color: var(--d_grey);
+}
+/*** Logo i Footer ***/
 /**************footer************/

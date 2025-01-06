@@ -1,3 +1,12 @@
+/*************** Reset *********************/
+img {
+  width: 100%;
+}
+* {
+  margin: 0;
+}
+/*************** Reset ************/
+
 /* H3 - portfolio */
 .h3_portfolio {
   margin-top: 4rem;
@@ -25,6 +34,8 @@
   height: auto;
   object-fit: cover; /* Sørger for at billeder fylder containeren uden at blive forvrænget */
 }
+
+/****Grid billedecollage tema4 (mobil)****/
 .grid_tema4_billeder1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -36,7 +47,9 @@
   gap: 10px;
   margin-top: 10px;
 }
+/****Grid billedecollage tema4 (mobil)****/
 
+/*****Grid temaer*****/
 /*Tema2*/
 @media (min-width: 800px) {
   .grid_tema2 {
@@ -98,8 +111,10 @@
   grid-column: 1; /* Placeres i kolonne 1 */
   grid-row: 2; /* 2. række */
 }
+/*****Grid temaer*****/
+/*******Portfolio grid*******/
 
-/*******Button*********/
+/*******Button portfoliosite*********/
 @media (min-width: 800px) {
   .button_container {
     display: flex;
@@ -111,5 +126,4 @@
     margin: 0 auto; /* Centrerer containeren horisontalt */
   }
 }
-/*******Button*********/
-/*******Portfolio grid*******/
+/*******Button portfoliosite*********/

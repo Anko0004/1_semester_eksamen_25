@@ -30,13 +30,12 @@ img {
   white-space: nowrap; /* Sørg for, at teksten bliver på én linje */
   color: var(--d_grey);
   font-family: "League Script", serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: clamp(1.5rem, 4vw, 4rem); /* Dynamisk tekststørrelse baseret på viewport */
   z-index: 1; /* Sørg for, at teksten ligger over billedet */
 }
 
 /***** Hero tekst *****/
-
 /***** Hero image ******/
 
 /***** portfolio collage*****/
@@ -90,7 +89,6 @@ img {
 /* Hover-effekt for billede */
 
 /*Portfolio forside knap*/
-
 .button_container_portfolio {
   margin-top: 1.5rem;
   margin-bottom: 9rem;
@@ -98,7 +96,6 @@ img {
   justify-content: center;
 }
 /*Portfolio forside knap*/
-
 /***** portfolio collage*****/
 
 /*******Omg mig forside *******/
@@ -109,8 +106,8 @@ img {
 .haandskrift {
   position: absolute; /* Placerer teksten over billedet */
   top: 77%;
-  left: 36%;
-  transform: rotate(-20deg); /*roterer teksten */
+  left: 32%;
+  transform: rotate(-14deg); /*roterer teksten */
 }
 
 @media (min-width: 700px) {
@@ -134,6 +131,7 @@ img {
   }
 }
 
+/*About side knap på forsiden*/
 .about_bottom {
   margin-top: 4rem;
   margin-bottom: 6rem;
@@ -151,10 +149,10 @@ img {
     margin-top: 0;
   }
 }
-/*About side knap på forsiden*/
+
 .button_container_about {
   margin-top: 0;
-  margin-bottom: 9rem;
+  margin-bottom: 7rem;
   display: flex;
   justify-content: center;
 }
@@ -169,6 +167,7 @@ img {
   gap: 50px;
   justify-content: center; /* Centrerer grid-elementerne horisontalt */
   align-items: center;
+  margin-bottom: 7rem;
 }
 
 .grid_1-1-1 img {
