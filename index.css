@@ -9,8 +9,17 @@ img {
 
 /***** Hero image *****/
 .hero_image {
-  position: relative; /* Gør det muligt at positionere elementer inde i containeren */
-  height: 70vh;
+  position: relative;
+  height: auto; /* Sæt højden til 70% af skærmhøjden */
+  overflow: hidden; /* Skjul alt uden for containeren */
+  background-size: cover; /* Sørg for, at billedet dækker hele containeren */
+}
+
+@media (min-width: 900px) {
+  .hero_image {
+    height: 90vh; /* Reducer højden yderligere på større skærme */
+    margin-bottom: 3rem;
+  }
 }
 /***** Hero image ******/
 
