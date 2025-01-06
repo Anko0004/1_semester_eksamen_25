@@ -56,6 +56,34 @@
     margin-top: 5rem;
   }
 }
+/*********Tape*********/
+.billede_wrapper {
+  position: relative; /* For at tape-billederne kan placeres absolut i forhold til dette element */
+}
+
+.billede_wrapper img {
+  height: auto;
+}
+
+.tape1 {
+  position: absolute;
+  top: 1%; /* Juster efter behov */
+  left: -13%; /* Juster efter behov */
+  width: 47%; /* Størrelse af tape-billederne */
+  height: auto;
+  transform: rotate(141deg);
+}
+
+.tape2 {
+  position: absolute;
+  top: -4%; /* Juster efter behov */
+  left: 26%; /* Juster efter behov */
+  width: 47%; /* Størrelse af tape-billederne */
+  height: auto;
+}
+/*********Tape*********/
+
+/*******About grid*******/
 
 /****Programmer grid******/
 

@@ -89,6 +89,16 @@ img {
 }
 /* Hover-effekt for billede */
 
+/*Portfolio forside knap*/
+
+.button_container_portfolio {
+  margin-top: 1.5rem;
+  margin-bottom: 9rem;
+  display: flex;
+  justify-content: center;
+}
+/*Portfolio forside knap*/
+
 /***** portfolio collage*****/
 
 /*******Omg mig forside *******/
@@ -124,17 +134,32 @@ img {
   }
 }
 
+.about_bottom {
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
 @media (min-width: 700px) {
   .about_bottom {
     display: flex;
     justify-content: flex-start; /* Venstrejusterer knappen */
     padding-left: 5rem;
     padding-right: 4rem;
-    margin-top: 0;
     max-width: 900px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
   }
 }
+/*About side knap på forsiden*/
+.button_container_about {
+  margin-top: 0;
+  margin-bottom: 9rem;
+  display: flex;
+  justify-content: center;
+}
+
+/*About side knap på forsiden*/
 /*******Omg mig forside *******/
 
 /***********"Programmer jeg bruger"**********/
