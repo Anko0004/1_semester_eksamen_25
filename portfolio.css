@@ -15,6 +15,16 @@
 /* H3 - portfolio */
 
 /*******Portfolio grid*******/
+
+/* Billederne skal fylde hele containeren uden at blive forvrænget */
+.grid_tema2 img,
+.grid_tema3 img,
+.grid_tema4 img,
+.grid_tema5 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Sørger for at billeder fylder containeren uden at blive forvrænget */
+}
 .grid_tema4_billeder1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
