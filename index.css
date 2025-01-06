@@ -10,17 +10,33 @@ img {
 /***** Hero image *****/
 .hero_image {
   position: relative;
-  height: auto; /* Sæt højden til 70% af skærmhøjden */
+  height: auto;
   overflow: hidden; /* Skjul alt uden for containeren */
   background-size: cover; /* Sørg for, at billedet dækker hele containeren */
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 900px) {
   .hero_image {
     height: 90vh; /* Reducer højden yderligere på større skærme */
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
 }
+/***** Hero tekst *****/
+.hero_text {
+  position: absolute;
+  top: 21%;
+  left: 6%;
+  white-space: nowrap; /* Sørg for, at teksten bliver på én linje */
+  color: var(--d_grey);
+  font-family: "League Script", serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 4rem); /* Dynamisk tekststørrelse baseret på viewport */
+  z-index: 1; /* Sørg for, at teksten ligger over billedet */
+}
+
+/***** Hero tekst *****/
+
 /***** Hero image ******/
 
 /***** portfolio collage*****/
