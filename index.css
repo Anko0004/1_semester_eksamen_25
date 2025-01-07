@@ -16,7 +16,7 @@ img {
   margin-bottom: 3rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 750px) {
   .hero_image {
     height: 90vh; /* Reducer højden yderligere på større skærme */
     margin-bottom: 4rem;
@@ -45,7 +45,7 @@ img {
   gap: 15px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 750px) {
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -110,7 +110,7 @@ img {
   transform: rotate(-14deg); /*roterer teksten */
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 750px) {
   .grid_om_mig {
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
@@ -137,7 +137,7 @@ img {
   margin-bottom: 6rem;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 750px) {
   .about_bottom {
     display: flex;
     justify-content: flex-start; /* Venstrejusterer knappen */
