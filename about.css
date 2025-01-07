@@ -7,15 +7,17 @@ img {
 }
 /*************** Reset ************/
 
+/***Håndskrift font****/
 .haandskrift_2 {
   font-family: "League Script", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.5rem;
 }
+/***Håndskrift font****/
 
-/**** Hvem er jeg****/
-@media (min-width: 800px) {
+/**** Hvem er jeg grid****/
+@media (min-width: 1440px) {
   .grid_om_mig_2 {
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
@@ -30,7 +32,6 @@ img {
 /**** Hvem er jeg****/
 
 /*******CV********/
-
 .cv_h2 {
   margin: 0 auto; /* Centerer indholdet */
   padding-left: 5rem;
@@ -39,6 +40,7 @@ img {
   margin-top: 7rem;
 }
 
+/*** CV skrift***/
 .cv li {
   font-family: "Roboto", serif;
   font-weight: 200;
@@ -46,7 +48,9 @@ img {
   color: var(--d_grey);
   line-height: 1.5; /* Gør linjehøjden som i afsnit */
 }
+/*** CV skrift***/
 
+/***CV grid***/
 .cv {
   margin: 0 auto; /* Centerer indholdet */
   margin-top: 0.5rem;
@@ -57,7 +61,7 @@ img {
   max-width: 900px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1440px) {
   .cv {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
@@ -65,6 +69,7 @@ img {
     align-items: start; /* Justerer indholdet til starten af hver kolonne */
   }
 }
+/***CV grid***/
 /*******CV********/
 
 /*********billede collage*****/
@@ -76,7 +81,8 @@ img {
   grid-template-columns: 1fr;
 }
 /****mobil site***/
-@media (min-width: 800px) {
+
+@media (min-width: 1440px) {
   .grid_om_mig_3 {
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
@@ -135,7 +141,7 @@ img {
   object-fit: contain; /* Sikrer, at billedet bevarer sine proportioner inden for boksen */
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1440px) {
   .grid_programmer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
