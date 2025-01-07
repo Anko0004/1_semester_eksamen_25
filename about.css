@@ -44,7 +44,7 @@ img {
 .cv li {
   font-family: "Roboto", serif;
   font-weight: 200;
-  font-size: 0.8rem; /*Jeg har valgt lidt mindre skrift, da det visuelt er pænere*/
+  font-size: 0.9rem; /*Jeg har valgt lidt mindre skrift, da det visuelt er pænere*/
   color: var(--d_grey);
   line-height: 1.5; /* Gør linjehøjden som i afsnit */
 }
@@ -53,9 +53,7 @@ img {
 /***CV grid***/
 .cv {
   margin: 0 auto; /* Centerer indholdet */
-  margin-top: 0.5rem;
-  margin-bottom: 5rem;
-  padding: 3rem 5rem;
+  padding: 3rem 2rem;
   border: 1px solid var(--d_grey); /* Tilføjer en firkantet kant */
   box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde/højde */
   max-width: 900px;
@@ -67,6 +65,7 @@ img {
     grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
     gap: 40px;
     align-items: start; /* Justerer indholdet til starten af hver kolonne */
+    padding: 3rem 5rem;
   }
 }
 /***CV grid***/
