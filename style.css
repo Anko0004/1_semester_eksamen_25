@@ -81,10 +81,13 @@ main {
 
 /******** Header ********/
 header {
+  position: sticky;
+  top: 0; /* Sørg for, at headeren bliver sticky når du når toppen af siden */
   display: flex; /*Child elementerne bliver placeres i en række eller kolonne*/
   padding: 30px; /*højden på headeren*/
   background-color: var(--background);
   justify-content: end; /*Child elementerne bliver placeres i enden*/
+  z-index: 1000; /* Gør headeren "ovenpå" andre elementer */
 }
 
 .menu a {
