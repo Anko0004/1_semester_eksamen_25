@@ -25,14 +25,33 @@ img {
 /***** Hero tekst *****/
 .hero_text {
   position: absolute;
-  top: 21%;
-  left: 6%;
-  white-space: nowrap; /* Sørg for, at teksten bliver på én linje */
-  color: var(--d_grey);
-  font-family: "League Script", serif;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Placerer teksten i toppen */
+  justify-content: flex-start; /* Placerer teksten til venstre */
+  padding: 5%;
+}
+
+.hero_text h1 {
+  color: black;
+  font-family: "Roboto", serif;
   font-weight: 600;
-  font-size: clamp(1.5rem, 4vw, 4rem); /* Dynamisk tekststørrelse baseret på viewport */
-  z-index: 1; /* Sørg for, at teksten ligger over billedet */
+  font-size: clamp(1.2rem, 3vw, 2.5rem); /* Mindre, men stadig responsiv */
+  text-align: left; /* Venstrestillet tekst */
+  width: 80%; /* Fylder hele bredden */
+}
+
+.hero_text p {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.6rem); /* Lidt mindre end h1 */
+  text-align: left;
+  width: 80%;
+  line-height: 1.4; /* Bedre læsbarhed */
 }
 
 /***** Hero tekst *****/
@@ -43,6 +62,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  margin-bottom: 6rem;
 }
 
 @media (min-width: 750px) {
@@ -50,17 +70,20 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
-    display: flex;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 }
 
 .billede_collage {
   position: relative;
-  width: 100%; /* Fylder hele containerens bredde */
-  height: auto; /* Bevarer billedets proportioner */
-  overflow: hidden; /* Skjuler eventuelt overskydende indhold */
+  width: 100%; /* Fylder hele grid-kolonnen */
+  aspect-ratio: 4 / 4; /* Gør billederne mindre i højden */
+  overflow: hidden;
+}
+
+.billede_collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Sørger for, at billeder ikke bliver strukket */
 }
 
 .text_overlay {
@@ -70,108 +93,26 @@ img {
   transform: translate(-50%, -50%); /* Justerer for præcis centrering */
   font-family: "Roboto", serif;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
   padding: 10px 20px;
   pointer-events: none; /* Gør at teksten ikke blokere linket*/
 }
 
-.large_number {
-  font-size: 3rem; /* Større tekst for tallet */
-  margin-bottom: 0.5rem;
-}
 /* Hover-effekt for billede */
+/* Standardtilstand - effekten er aktiv */
+.billede_collage img {
+  filter: blur(0.5px) brightness(75%);
+  opacity: 0.8;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/* Når du hover over billedet, fjernes effekten */
 .billede_collage:hover img {
-  filter: blur(0.5px) brightness(50%); /* Slører billedet og reducerer lysstyrken for mørkere effekt */
-  opacity: 0.7; /* Giver en mørkere effekt */
+  filter: none;
+  opacity: 1;
 }
 /* Hover-effekt for billede */
 
-/*Portfolio forside knap*/
-.button_container_portfolio {
-  margin-top: 1.5rem;
-  margin-bottom: 9rem;
-  display: flex;
-  justify-content: center;
-}
-/*Portfolio forside knap*/
 /***** portfolio collage*****/
-
-/*******Omg mig forside *******/
-.billede_med_skraaskrift {
-  position: relative; /* For at placere overlayet korrekt */
-}
-
-.haandskrift {
-  position: absolute; /* Placerer teksten over billedet */
-  top: 77%;
-  left: 32%;
-  transform: rotate(-14deg); /*roterer teksten */
-}
-
-@media (min-width: 750px) {
-  .grid_om_mig {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
-    gap: 30px;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .om_mig_tekst {
-    text-align: left; /* Fjerner centreret tekst */
-  }
-
-  .om_mig_tekst h2 {
-    text-align: left; /* H2 justeres til venstre */
-    margin-top: 0;
-  }
-}
-
-/*About side knap på forsiden*/
-.about_bottom {
-  margin-top: 4rem;
-  margin-bottom: 6rem;
-}
-
-@media (min-width: 750px) {
-  .about_bottom {
-    display: flex;
-    justify-content: flex-start; /* Venstrejusterer knappen */
-    padding-left: 5rem;
-    padding-right: 4rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-  }
-}
-
-.button_container_about {
-  margin-top: 0;
-  margin-bottom: 7rem;
-  display: flex;
-  justify-content: center;
-}
-
-/*About side knap på forsiden*/
-/*******Omg mig forside *******/
-
-/***********"Programmer jeg bruger"**********/
-.grid_1-1-1 {
-  display: grid;
-  grid-template-columns: repeat(3, auto); /* Kolonner tilpasser sig billedstørrelsen (metode fundet på nettet)*/
-  gap: 50px;
-  justify-content: center; /* Centrerer grid-elementerne horisontalt */
-  align-items: center;
-  margin-bottom: 7rem;
-}
-
-.grid_1-1-1 img {
-  max-width: 60px;
-  height: 60px;
-}
-/***********"Programmer jeg bruger"**********/
