@@ -1,15 +1,22 @@
 /*************** Reset *********************/
-img {
+html,
+body {
   width: 100%;
+  overflow-x: hidden; /* fjern horisontal scroll */
+  box-sizing: border-box;
 }
-* {
-  margin: 0;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
+
 /*************** Reset ************/
 /** Farver **/
 :root {
   --background: #ffffff;
-  --red: #f93922;
+  --red: #a52112;
   --d_grey: #000000;
 }
 /** Farver **/
@@ -18,14 +25,14 @@ img {
 h1 {
   text-align: center;
   margin-top: 1rem;
-  margin-bottom: 1.5rem;
   font-family: "Roboto", serif;
   font-weight: 400;
   font-size: 2.5rem;
   color: var(--d_grey);
+  text-decoration: none;
 }
 h2 {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0rem;
   margin-top: 2rem;
   font-family: "Roboto", serif;
   font-weight: 500;
@@ -35,12 +42,21 @@ h2 {
 
 h3 {
   margin-top: 0rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   font-family: "Roboto", serif;
   font-weight: 500;
   font-size: 1.5rem;
   color: var(--d_grey);
 }
+h4 {
+  margin-top: 0rem;
+  margin-bottom: 0.8rem;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--d_grey);
+}
+
 .service_p {
   max-width: 800px; /* Begrænser bredden, så teksten ikke fylder hele skærmen */
 }
@@ -53,17 +69,23 @@ h3 {
 
 p {
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-family: "Roboto", serif;
   font-weight: 300;
   font-size: 1rem;
   color: var(--d_grey);
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .p_bold {
   font-family: "Roboto", serif;
   font-weight: 500;
+}
+
+.p_bold_tools {
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  margin-bottom: 0;
 }
 
 /***Fonte***/
@@ -92,7 +114,7 @@ header {
   padding: 35px;
   background-color: var(--background);
   justify-content: space-between; /* Placerer elementer korrekt */
-  z-index: 1000;
+  z-index: 3000;
   margin-bottom: 1rem;
 }
 
@@ -118,7 +140,7 @@ header {
   margin: 0;
   padding: 0;
   position: absolute;
-  right: 20px; /* Placer menuen i højre side */
+  right: 50px; /* Placer menuen i venstre side */
 }
 
 .menu a {
@@ -132,10 +154,10 @@ header {
 
 /***** Hover på menu *****/
 .menu a:hover {
-  color: var(--red);
+  text-decoration: underline;
 }
 .menu a.active {
-  color: var(--red);
+  text-decoration: underline;
 }
 /***** Hover på menu *****/
 
@@ -153,14 +175,18 @@ header {
 /*** Mobil-visning ***/
 @media (max-width: 768px) {
   .menu {
-    display: none; /* Skjul kun menuen */
+    display: none; /* skjult som udgangspunkt */
     flex-direction: column;
+    padding-top: 6rem;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: var(--background);
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 200px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
   }
 
   .menu.show {
@@ -174,6 +200,7 @@ header {
 
   .burger-menu {
     display: block; /* Vis burger-menu knappen */
+    z-index: 10000;
   }
 }
 
@@ -207,15 +234,16 @@ header {
 footer {
   width: 100%;
   margin: 0;
-  margin-top: 10rem;
+  margin-top: 3rem;
   overflow-x: hidden; /* Skjuler eventuel horisontal scroll */
   position: relative; /* For at logoet kan placeres absolut i forhold til footeren */
+  margin-bottom: 2rem;
 }
 
 footer a {
   font-family: "Roboto", serif;
   font-weight: 200;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: var(--d_grey);
   text-decoration: none;
   padding-left: 1rem;
@@ -223,13 +251,13 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--red);
+  text-decoration: underline;
 }
 
 footer p {
   font-family: "Roboto", serif;
-  font-weight: 300;
-  font-size: 0.8rem;
+  font-weight: 400;
+  font-size: 0.6rem;
   color: var(--d_grey);
   padding-left: 1rem;
   padding-right: 1rem;
@@ -239,20 +267,8 @@ footer p {
   display: flex;
   justify-content: center; /* Centrerer indholdet horisontalt */
   align-items: center; /* Justerer indholdet vertikalt */
-  gap: 50px; /* Afstand mellem elementerne */
+  gap: 5%; /* Afstand mellem elementerne */
   text-align: center; /* Sørger for at teksten er centreret */
-}
-
-.mail {
-  margin-bottom: 2rem;
-}
-
-.instagram {
-  margin-bottom: 2rem;
-}
-
-.linkedin {
-  margin-bottom: 2rem;
 }
 
 /**************footer************/

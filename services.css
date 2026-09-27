@@ -1,9 +1,16 @@
 /*************** Reset *********************/
-img {
+html,
+body {
   width: 100%;
-}
-* {
+  overflow-x: hidden; /* fjern horisontal scroll */
+  box-sizing: border-box;
   margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 /*************** Reset ************/
 
@@ -24,7 +31,7 @@ img {
 .grid_text,
 .grid_text_4,
 .grid_text_2 h3 {
-  margin-top: 5rem; /* Tilføj luft over h3 på mobil */
+  margin-top: 3rem; /* Tilføj luft over h3 på mobil */
 }
 
 .grid_text,
@@ -41,6 +48,10 @@ img {
     margin-left: 4rem;
     margin-right: 4rem;
   }
+}
+
+.view_project {
+  text-decoration: underline;
 }
 
 /* Fjern margin-top på større skærme */

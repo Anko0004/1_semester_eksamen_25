@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -14,11 +15,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
 
     <!-- Favicon links -->
 
 
-    <title>LAGENZY</title>
+    <title>ANNA PRI KOVSTED</title>
 </head>
 
 <body>
@@ -26,14 +46,13 @@
         <nav>
             <div class="logo">
                 <a href="index.html">
-                    <img src="img_lagenzy/logo.webp" alt="LAGENZY logo">
+
                 </a>
             </div>
 
             <ul class="menu">
-                <li><a href="index.html">HJEM</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="cases.html">CASES</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="services.html">WORK</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -43,70 +62,102 @@
 
 
 
-
     <div class="hero_image">
-        <img src="img_lagenzy/thumbnail_IMG_7467.webp" alt="hero">
         <div class="hero_text">
-            <h1>
-                A creative agency blending innovation with expertise to create bold, impactful, and creative solutions
-                that
-                keep your brand sharp and relevant in a changing world.
-
-            </h1>
-
-            <p>
-                We specialize in creating strategic, visually compelling campaigns, content, and brand
-                activations—delivering high quality branding at fair prices, backed by 30 years of expertise
-            </p>
+            <h1>ANNA PRI KOVSTED</h1>
+            <p>Welcome to my portfolio</p>
+            <p class="p_mini">"By combining strategy, creativity, and design, I create brand communication that is both
+                engaging and effective."</p>
         </div>
+
+        <!-- Nyt dekorativt billede -->
+        <img src="img_portfolio/sofabord_.webp" alt="Anna arbejder" class="hero_decor">
+
+
+        <!-- Scroll down (med sikker fallback) -->
+        <a href="#my-work" class="scroll-down" aria-label="Scroll to My Work"
+            onclick="event.stopImmediatePropagation(); document.querySelector('#my-work')?.scrollIntoView({behavior:'smooth', block:'start'}); return false;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-hidden="true">
+                <path d="M12 4V20M12 20L5 13M12 20L19 13" stroke="black" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
     </div>
 
     <main>
-        <div class="services">
+        <div class="services" id="my-work">
             <div>
-                <h2>SERVICES</h2>
-                <p class="service_p">We offer tailored creative solutions with a holistic approach, deeply understanding
-                    your
-                    brand's DNA and values. With a sharp aesthetic eye and respect for your budget and needs,
-                    we ensure top quality results at fair prices.</p>
+                <h2>SELECTED WORK</h2>
+                <p class="service_p">A selection of projects developed through my studies, internship, and external
+                    collaborations.</p>
             </div>
 
             <div class="grid_1-1">
                 <div class="billede_collage">
                     <a href="services.html#services1"> <!-- Linker til tema2 på portfolio-siden -->
-                        <img src="img_lagenzy/billede_collage_1.webp" alt="tema2">
+                        <img src="img_portfolio/billede_collage_1.png" alt="tema2">
                     </a>
-                    <div class="text_overlay">
-                        CREATIVE DEVELOPMENT
+                    <div class="text_under">
+                        01 BOLD SCANDINAVIA - BRAND WORK
                     </div>
                 </div>
 
                 <div class="billede_collage">
                     <a href="services.html#services2">
-                        <img src="img_lagenzy/billede_collage_2.webp" alt="tema3">
+                        <img src="img_portfolio/billede_collage_2.png" alt="tema3">
                     </a>
-                    <div class="text_overlay">
-                        BRANDING STRATEGY
+                    <div class="text_under">
+                        02 BUSY BEING WELL - WEBSITE
                     </div>
                 </div>
 
                 <div class="billede_collage">
                     <a href="services.html#services3">
-                        <img src="img_lagenzy/billede_collage_3.webp" alt="tema4">
+                        <img src="img_portfolio/billede_collage_3.png" alt="tema4">
                     </a>
-                    <div class="text_overlay">
-                        BRAND ACTIVATIONS
+                    <div class="text_under">
+                        03 DET GRØNLANDSKE HUS - REDESIGN
                     </div>
                 </div>
 
                 <div class="billede_collage">
                     <a href="services.html#services4">
-                        <img src="img_lagenzy/billede_collage_4.webp" alt="tema5">
+                        <img src="img_portfolio/billede_collage_4.png" alt="tema5">
                     </a>
-                    <div class="text_overlay">
-                        CONSULTING
+                    <div class="text_under">
+                        04 WEBSITE FOR LAGENZY
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="programmer_about" id="programmer_section">
+            <h2>TOOLS & TECHNOLOGIES:</h2>
+
+
+            <div class="grid_programmer">
+                <div>
+                    <img src="img_portfolio/creative_cloud.png" alt="creative_cloud_logo">
+                    <p class="p_bold_tools">Creative Cloud</p>
+                    <p>Proficient in Creative Clouds Adobe programs for visual
+                        design, video, and content.</p>
+
+                </div>
+
+
+                <div>
+                    <img src="img_portfolio/astro.jpeg" alt="vsc_logo">
+                    <p class="p_bold_tools">HTML, CSS, & CMS</p>
+                    <p>Building responsive, fast sites with a modern, component-based workflow.</p>
+                </div>
+
+                <div>
+                    <img src="img_portfolio/figma_logo.png" alt="figma_logo">
+                    <p class="p_bold_tools">Figma</p>
+                    <p>Graphic design & experience with wireframing, prototyping, and UI design.</p>
+                </div>
+
             </div>
         </div>
 
@@ -115,16 +166,18 @@
     <footer>
         <div class="grid_1-1-1_footer">
 
-            <div class="linkedin">
-                <a href="https://www.linkedin.com/feed/">Linkedin</a>
-            </div>
-            <div class="mail">
-                <a href="mailto:Anko0004@stud.kea.dk">Anko0004@stud.kea.dk</a>
+            <div class="LinkedIn">
+                <a href="https://www.linkedin.com/in/anna-pri-kovsted-70516a33a/">LinkedIn</a>
             </div>
 
-            <div class="instagram">
-                <a href="https://www.instagram.com/lagenzycph/">+4571204547</a>
+            <div class="mail">
+                <a href="mailto:annaprikovsted@hotmail.com">annaprikovsted@hotmail.com</a><br>
             </div>
+
+            <div class="telefon">
+                <a href="tel:+4571204547">+45 71 20 45 47</a>
+            </div>
+
         </div>
 
     </footer>

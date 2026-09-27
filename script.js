@@ -17,3 +17,15 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleMenu() {
   document.querySelector(".menu").classList.toggle("show");
 }
+
+// Find scroll-knappen
+const scrollBtn = document.querySelector(".scroll-down");
+
+// Skjul pilen, når man scroller ned
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    scrollBtn.classList.add("hidden"); // Skjul pilen
+  } else {
+    scrollBtn.classList.remove("hidden"); // Vis pilen igen
+  }
+});

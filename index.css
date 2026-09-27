@@ -1,32 +1,145 @@
 /*************** Reset *********************/
-img {
+html,
+body {
   width: 100%;
+  overflow-x: hidden; /* fjern horisontal scroll */
+  box-sizing: border-box;
 }
-* {
-  margin: 0;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 /*************** Reset ************/
 
-/***** Hero image *****/
+/* Hero */
 .hero_image {
   position: relative;
-  height: auto;
-  overflow: hidden; /* Skjul alt uden for containeren */
-  background-size: cover; /* Sørg for, at billedet dækker hele containeren */
-  margin-bottom: 3rem;
-  filter: brightness(90%);
+  min-height: 92vh; /* fallback til ældre browsere */
+  overflow: hidden;
+  background-size: cover;
+  padding-bottom: 140px;
 }
 
-@media (min-width: 750px) {
+@supports (height: 100svh) {
   .hero_image {
-    height: 90vh; /* Reducer højden yderligere på større skærme */
-    margin-bottom: 4rem;
+    min-height: 92svh; /* stabil viewport-højde i moderne browsere (iOS/Android) */
   }
 }
+
+@media (min-width: 600px) {
+  .hero_image {
+    position: relative;
+    min-height: 90vh; /* fallback */
+    overflow: hidden;
+    background-size: cover;
+  }
+  @supports (height: 100svh) {
+    .hero_image {
+      min-height: 85svh; /* stabil version */
+    }
+  }
+}
+
+/* Hvis du har gradient/overlay på hero, lad det ikke stjæle klik */
+.hero_image::before,
+.hero_image::after,
+.hero_image .overlay {
+  pointer-events: none !important;
+}
+
+/* Det dekorative billede */
+.hero_decor {
+  position: absolute;
+  right: 0;
+  bottom: max(80px, calc(env(safe-area-inset-bottom) + 60px));
+  width: 65%; /* justér størrelsen her */
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  z-index: 1; /* billedet ligger bag pil og tekst */
+  opacity: 0.9; /* valgfrit: gør det lidt diskret */
+  pointer-events: none; /* sørger for, at det ikke blokerer klik */
+}
+
+@media (min-width: 600px) {
+  .hero_decor {
+    position: absolute;
+    bottom: 60px; /* starter nede i bunden */
+    width: 40%; /* justér størrelsen her */
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    z-index: 1; /* billedet ligger bag pil og tekst */
+    opacity: 0.9; /* valgfrit: gør det lidt diskret */
+    pointer-events: none; /* sørger for, at det ikke blokerer klik */
+  }
+}
+
+/* Scroll-pil */
+.scroll-down {
+  position: absolute;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  animation: bounce 1.5s infinite;
+  z-index: 9999; /* altid øverst */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* fade-effekt */
+}
+
+.scroll-down.hidden {
+  opacity: 0;
+  pointer-events: none; /* kan ikke klikkes, når den er skjult */
+}
+
+.scroll-down svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+.scroll-down:hover svg {
+  transform: translateY(3px);
+}
+
+@media (min-width: 600px) {
+  .scroll-down {
+    bottom: 20px;
+  }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(5px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(3px);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hvis du har fixed header, så land pænt under den (ellers kan du slette denne) */
+#my-work {
+  scroll-margin-top: 80px;
+}
+
 /***** Hero tekst *****/
 .hero_text {
-  position: absolute;
-  top: 20%;
+  position: relative;
   left: 0;
   width: 100%;
   height: 100%;
@@ -34,32 +147,85 @@ img {
   flex-direction: column;
   align-items: flex-start; /* Placerer teksten i toppen */
   justify-content: flex-start; /* Placerer teksten til venstre */
-  padding: 5%;
+  z-index: 1000;
+  padding-top: 12%;
 }
 
 .hero_text h1 {
-  color: black;
-  font-family: "Roboto", serif;
+  color: rgb(0, 0, 0);
+  font-family: "DM Sans", sans-serif;
   font-weight: 600;
-  font-size: clamp(1.2rem, 3vw, 2.5rem); /* Mindre, men stadig responsiv */
+  font-size: clamp(1.8rem, 6vw, 4rem); /* 1.8rem på små skærme, max 4rem */
   text-align: left; /* Venstrestillet tekst */
-  width: 80%; /* Fylder hele bredden */
+  width: 95%; /* Fylder hele bredden */
+  margin-top: -1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  .hero_text h1 {
+    padding-left: 4rem;
+  }
 }
 
 .hero_text p {
-  font-family: "Roboto", serif;
-  font-weight: 400;
-  font-size: clamp(1rem, 2vw, 1.6rem); /* Lidt mindre end h1 */
-  text-align: left;
-  width: 80%;
-  line-height: 1.4; /* Bedre læsbarhed */
+  color: rgb(0, 0, 0);
+  font-family: "Cormorant Garamond", serif;
+  padding-left: 1rem;
 }
 
-@media (max-width: 600px) {
+.hero_text p {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(2.7rem, 4vw, 5rem); /* skalerer automatisk */
+  text-align: left;
+  width: 100%;
+  line-height: 1.4; /* Bedre læsbarhed */
+  margin-bottom: 1.5rem;
+  margin-top: -0.5rem;
+  letter-spacing: -0.1rem;
+}
+
+@media (min-width: 600px) {
   .hero_text p {
-    display: none; /* Skjul hero teksten på små skærme */
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 4rem; /* Lidt mindre end h1 */
+    text-align: left;
+    width: 100%;
+    line-height: 1.4; /* Bedre læsbarhed */
+    margin-bottom: 1.5rem;
+    margin-top: -0.5rem;
+    letter-spacing: -0.1rem;
+    padding-left: 4rem;
   }
 }
+
+.hero_text .p_mini {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 100; /* Thin */
+  font-style: italic; /* Italic */
+  text-align: left;
+  width: 90%;
+  line-height: 1.4; /* Bedre læsbarhed */
+  letter-spacing: 0.1rem;
+  font-size: clamp(1.5rem, 4vw, 1.8rem); /* skalerer automatisk */
+}
+
+@media (min-width: 600px) {
+  .hero_text .p_mini {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 100; /* Thin */
+    font-style: italic; /* Italic */
+    text-align: left;
+    width: 60%;
+    line-height: 1.4; /* Bedre læsbarhed */
+    letter-spacing: 0.1rem;
+    font-size: 1.7rem;
+  }
+}
+
 /***** Hero tekst *****/
 /***** Hero image ******/
 
@@ -72,12 +238,12 @@ img {
   .services {
     padding-left: 4rem;
     padding-right: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
 }
 .grid_1-1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 15px;
   margin-bottom: 4rem;
 }
@@ -93,8 +259,6 @@ img {
 .billede_collage {
   position: relative;
   width: 100%; /* Fylder hele grid-kolonnen */
-  aspect-ratio: 4 / 4; /* Gør billederne mindre i højden */
-  overflow: hidden;
 }
 
 .billede_collage img {
@@ -103,33 +267,69 @@ img {
   object-fit: cover; /* Sørger for, at billeder ikke bliver strukket */
 }
 
-.text_overlay {
-  position: absolute; /* Placerer teksten over billedet */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Justerer for præcis centrering */
+.billede_collage > a {
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden; /* klip zoom */
+}
+
+.text_under {
+  margin-top: 0.5rem;
   font-family: "Roboto", serif;
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  padding: 10px 20px;
-  pointer-events: none; /* Gør at teksten ikke blokere linket*/
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--d_grey);
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 850px) {
+  .text_under {
+    margin-top: 0.5rem;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--d_grey);
+  }
 }
 
 /* Hover-effekt for billede */
-/* Standardtilstand - effekten er aktiv */
-.billede_collage img {
-  filter: blur(0.5px) brightness(75%);
-  opacity: 0.8;
-  transition: filter 0.3s ease, opacity 0.3s ease;
-}
 
-/* Når du hover over billedet, fjernes effekten */
 .billede_collage:hover img {
-  filter: none;
-  opacity: 1;
+  filter: saturate(0.88) brightness(1.04) contrast(0.98);
+  transform: scale(1.01);
 }
 /* Hover-effekt for billede */
 
 /***** portfolio collage*****/
+
+/****Programmer grid******/
+.programmer_about {
+  margin-top: 7rem;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.grid_programmer {
+  margin-top: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.grid_programmer img {
+  max-width: 60px;
+  height: 60px;
+  object-fit: contain; /* Sikrer, at billedet bevarer sine proportioner inden for boksen */
+  filter: grayscale(100%) contrast(0.75) brightness(1.2);
+}
+
+@media (min-width: 750px) {
+  .grid_programmer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    align-items: start; /* Justerer indholdet til starten af hver kolonne */
+    max-width: 800px;
+    margin-inline: auto;
+    gap: 35px;
+  }
+}

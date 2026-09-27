@@ -1,9 +1,15 @@
 /*************** Reset *********************/
-img {
+html,
+body {
   width: 100%;
+  overflow-x: hidden; /* fjern horisontal scroll */
+  box-sizing: border-box;
 }
-* {
-  margin: 0;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 /*************** Reset ************/
 
@@ -19,8 +25,7 @@ img {
 
 @media (min-width: 900px) {
   .grid_about {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
+    max-width: 70%;
     margin: 0 auto;
     margin-top: 2rem;
     margin-left: 4rem;
@@ -30,49 +35,22 @@ img {
   }
 }
 
-/* Grid Lulu Alva */
-@media (min-width: 900px) {
-  .grid_about_lulu {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
-    margin: 0 auto;
-    align-items: center; /* Centrerer tekst vertikalt */
-  }
+.grid_about_photo {
+  display: grid;
+  grid-template-columns: 1fr; /* mobil: en kolonne */
+  gap: 30px;
+  margin: 2rem 1rem;
 }
 
-/* Bytter rækkefølgen i computer size */
-.lulu_text {
-  order: 2; /* Flytter teksten til kolonne 1 */
-}
-
-.grid_about_lulu img {
-  order: 1; /* Flytter billedet til kolonne 2 */
+.grid_about_photo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 @media (min-width: 900px) {
-  .grid_about_alva {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
-    margin: 0 auto;
-    align-items: center; /* Centrerer tekst vertikalt */
+  .grid_about_photo {
+    grid-template-columns: repeat(3, 1fr); /* desktop: tre kolonner */
+    margin: 4rem 4rem 0;
   }
 }
-
-.alva_text,
-.lulu_text {
-  margin-top: 5rem; /* Tilføj luft over h3 på mobil */
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-/* Fjern margin-top på større skærme */
-@media (min-width: 900px) {
-  .alva_text,
-  .lulu_text {
-    margin-top: 0; /* Fjerner ekstra afstand på desktop */
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-}
-
-/**** Hvem er jeg****/
