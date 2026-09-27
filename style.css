@@ -25,7 +25,8 @@ h1 {
   color: var(--d_grey);
 }
 h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
+  margin-top: 2rem;
   font-family: "Roboto", serif;
   font-weight: 500;
   font-size: 2rem;
@@ -34,7 +35,7 @@ h2 {
 
 h3 {
   margin-top: 0rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem;
   font-family: "Roboto", serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -73,6 +74,7 @@ body {
 }
 /****Body*****/
 /*****************Main***********/
+/*
 main {
   max-width: 1200px;
   margin: auto;
@@ -84,16 +86,43 @@ main {
 /******** Header ********/
 header {
   position: sticky;
-  top: 0; /* Sørg for, at headeren bliver sticky når du når toppen af siden */
-  display: flex; /*Child elementerne bliver placeres i en række eller kolonne*/
-  padding: 30px; /*højden på headeren*/
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 35px;
   background-color: var(--background);
-  justify-content: end; /*Child elementerne bliver placeres i enden*/
-  z-index: 1000; /* Gør headeren "ovenpå" andre elementer */
+  justify-content: space-between; /* Placerer elementer korrekt */
+  z-index: 1000;
+  margin-bottom: 1rem;
+}
+
+/*** Logo (forbliver på venstre side) ***/
+.logo {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+}
+
+.logo img {
+  max-width: 100%; /* Sørger for, at billedet ikke overstiger forældrecontainerens bredde */
+  width: 220px; /* Standardstørrelse */
+  height: auto; /* Bevarer billedets proportioner */
+}
+
+/*** Logo ***/
+
+/*** Navigation ***/
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 20px; /* Placer menuen i højre side */
 }
 
 .menu a {
-  padding: 10px; /*mellemrummet mellem teksten*/
+  padding: 10px;
   color: var(--d_grey);
   text-decoration: none;
   font-family: "Roboto", serif;
@@ -101,47 +130,52 @@ header {
   font-size: 1rem;
 }
 
-.menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*****Hover på menu*****/
+/***** Hover på menu *****/
 .menu a:hover {
   color: var(--red);
 }
 .menu a.active {
   color: var(--red);
 }
-/*****Hover på menu*****/
+/***** Hover på menu *****/
 
-/***Logo***/
-.logo {
-  margin-right: auto;
+/*** Burger-menu knap (mobil) ***/
+.burger-menu {
+  display: none; /* Skjult på store skærme */
+  font-size: 2rem;
+  cursor: pointer;
   position: absolute;
-  top: 16px;
-  left: 10px;
-}
-
-.logo a {
-  font-family: "Roboto", serif;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 2.5rem;
+  top: 20px;
+  right: 20px;
   color: var(--d_grey);
 }
 
-.logo a.active {
-  color: var(--d_grey); /*Logoet forbliver gråt, når man er på forsiden*/
-}
-.logo a:hover {
-  color: var(--red);
-}
+/*** Mobil-visning ***/
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Skjul kun menuen */
+    flex-direction: column;
+    background-color: var(--background);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
-/***Logo***/
-/******** Header ********/
+  .menu.show {
+    display: flex; /* Vis menu når show-klassen tilføjes */
+  }
+
+  .menu li {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .burger-menu {
+    display: block; /* Vis burger-menu knappen */
+  }
+}
 
 /*******Ux/ui elementer *******/
 /*General knap:*/
@@ -173,8 +207,7 @@ header {
 footer {
   width: 100%;
   margin: 0;
-  margin-top: 15rem;
-  border-top: 1px solid var(--d_grey); /* Tilføjer linje mellem main og footer */
+  margin-top: 10rem;
   overflow-x: hidden; /* Skjuler eventuel horisontal scroll */
   position: relative; /* For at logoet kan placeres absolut i forhold til footeren */
 }
@@ -182,7 +215,7 @@ footer {
 footer a {
   font-family: "Roboto", serif;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--d_grey);
   text-decoration: none;
   padding-left: 1rem;
@@ -196,31 +229,30 @@ footer a:hover {
 footer p {
   font-family: "Roboto", serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--d_grey);
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 .grid_1-1-1_footer {
-  display: grid;
-  gap: 30px;
+  display: flex;
+  justify-content: center; /* Centrerer indholdet horisontalt */
+  align-items: center; /* Justerer indholdet vertikalt */
+  gap: 50px; /* Afstand mellem elementerne */
+  text-align: center; /* Sørger for at teksten er centreret */
 }
 
 .mail {
-  margin-top: 2rem;
-}
-
-.sociale_medier {
   margin-bottom: 2rem;
 }
 
-/*** Logo i Footer ***/
-.logo_footer {
-  position: absolute;
-  bottom: 30px; /* Placerer logoet 16px fra bunden */
-  right: 30px; /* Placerer logoet 10px fra højre */
+.instagram {
+  margin-bottom: 2rem;
 }
 
-/*** Logo i Footer ***/
+.linkedin {
+  margin-bottom: 2rem;
+}
+
 /**************footer************/

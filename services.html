@@ -23,74 +23,81 @@
 
 <body>
     <header>
-
         <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img_lagenzy/logo.webp" alt="LAGENZY logo">
+                </a>
+            </div>
+
             <ul class="menu">
                 <li><a href="index.html">HJEM</a></li>
                 <li><a href="services.html">SERVICES</a></li>
                 <li><a href="cases.html">CASES</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
-                <li class="logo"><a href="index.html">LAGENZY</a></li>
-
             </ul>
+            <div class="burger-menu" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
 
     <main>
-        <div>
-            <h2 class="services_overskirft">SERVICES</h2>
-            <p class="service_p">We offer tailored creative solutions with a holistic approach, deeply understanding
-                your
-                brand's DNA and values. With a sharp aesthetic eye and respect for your budget and needs,
-                we ensure top quality results at fair prices.</p>
-        </div>
 
-        <div class="grid_1-1">
-            <div class="billede_collage">
-                <a href="services.html#services1"> <!-- Linker til tema2 på portfolio-siden -->
-                    <img src="img_lagenzy/billede_collage_1.webp" alt="tema2">
-                </a>
-                <div class="text_overlay">
-                    CREATIVE DEVELOPMENT
-                </div>
+        <div class="services">
+            <div>
+                <h2 class="services_overskirft">SERVICES</h2>
+                <p class="service_p">We offer tailored creative solutions with a holistic approach, deeply understanding
+                    your
+                    brand's DNA and values. With a sharp aesthetic eye and respect for your budget and needs,
+                    we ensure top quality results at fair prices.</p>
             </div>
 
-            <div class="billede_collage">
-                <a href="services.html#services2">
-                    <img src="img_lagenzy/billede_collage_2.webp" alt="tema3">
-                </a>
-                <div class="text_overlay">
-                    BRANDING STRATEGY
+            <div class="grid_1-1">
+                <div class="billede_collage">
+                    <a href="services.html#services1"> <!-- Linker til tema2 på portfolio-siden -->
+                        <img src="img_lagenzy/billede_collage_1.webp" alt="tema2">
+                    </a>
+                    <div class="text_overlay">
+                        CREATIVE DEVELOPMENT
+                    </div>
                 </div>
-            </div>
 
-            <div class="billede_collage">
-                <a href="services.html#services3">
-                    <img src="img_lagenzy/billede_collage_3.webp" alt="tema4">
-                </a>
-                <div class="text_overlay">
-                    BRAND ACTIVATIONS
+                <div class="billede_collage">
+                    <a href="services.html#services2">
+                        <img src="img_lagenzy/billede_collage_2.webp" alt="tema3">
+                    </a>
+                    <div class="text_overlay">
+                        BRANDING STRATEGY
+                    </div>
                 </div>
-            </div>
 
-            <div class="billede_collage">
-                <a href="services.html#services4">
-                    <img src="img_lagenzy/billede_collage_4.webp" alt="tema5">
-                </a>
-                <div class="text_overlay">
-                    CONSULTING
+                <div class="billede_collage">
+                    <a href="services.html#services3">
+                        <img src="img_lagenzy/billede_collage_3.webp" alt="tema4">
+                    </a>
+                    <div class="text_overlay">
+                        BRAND ACTIVATIONS
+                    </div>
+                </div>
+
+                <div class="billede_collage">
+                    <a href="services.html#services4">
+                        <img src="img_lagenzy/billede_collage_4.webp" alt="tema5">
+                    </a>
+                    <div class="text_overlay">
+                        CONSULTING
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="Services1" id="services1">
 
-            <h3 class="h3_portfolio">CREATIVE DEVELOPMENT</h3>
+
 
             <div class="grid_services1">
-
-                <div>
+                <div class="grid_text">
+                    <h3>CREATIVE DEVELOPMENT</h3>
                     <p>
                         We specialize in crafting high-quality content and campaigns designed to elevate your brand
                         through a strategic, visually-driven approach. From concept to execution, we manage all
@@ -113,15 +120,11 @@
         <div class="Services2" id="services2">
 
 
-            <h3 class="h3_portfolio">BRANDING STRATEGY</h3>
+
 
             <div class="grid_services2">
-
-                <div>
-                    <img src="img_lagenzy/billede_collage_2.webp" alt="billede2">
-                </div>
-
-                <div class="tekst1_tema3">
+                <div class="grid_text_2">
+                    <h3>BRANDING STRATEGY</h3>
                     <P>
                         A strong social media presence requires more than just content—it demands a clear,
                         strategic approach. We create tailored social media strategies that outline exactly what
@@ -132,16 +135,22 @@
                         content serves a purpose and delivers real results.
                     </P>
                 </div>
+                <div>
+                    <img src="img_lagenzy/billede_collage_2.webp" alt="billede2">
+                </div>
+
+
             </div>
         </div>
 
 
         <div class="Services3" id="services3">
 
-            <h3 class="h3_services">BRAND ACTIVATIONS</h3>
+
 
             <div class="grid_services3">
-                <div>
+                <div class="grid_text">
+                    <h3>BRAND ACTIVATIONS</h3>
                     <p>We design brand activations that leave a lasting impression—transforming creative, unique
                         ideas into experiences that connect and inspire. In today’s fast-paced world, standing out
                         requires more than visibility; it demands a thoughtful, creative and strategic approach rooted
@@ -166,16 +175,10 @@
 
         <div class="Services4" id="services4">
 
-            <h3 class="h3_portfolio">CONSULTING</h3>
 
             <div class="grid_services4">
-
-                <div>
-                    <img src="img_lagenzy/billede_collage_4.webp" alt="billede4">
-                </div>
-
-                <div>
-
+                <div class="grid_text_4">
+                    <h3>CONSULTING</h3>
                     <p>With 30 years of experience in the fashion, beauty, and lifestyle industries, we deliver
                         creative, strategic, and professional solutions. Our broad expertise across marketing, sales,
                         e-commerce, PR, wholesale and retail, design, and creative direction gives us a deep
@@ -191,6 +194,11 @@
                     </p>
 
                 </div>
+                <div>
+                    <img src="img_lagenzy/billede_collage_4.webp" alt="billede4">
+                </div>
+
+
 
 
 
@@ -204,27 +212,17 @@
 
     <footer>
         <div class="grid_1-1-1_footer">
+
+            <div class="linkedin">
+                <a href="https://www.linkedin.com/feed/">Linkedin</a>
+            </div>
             <div class="mail">
-                <p>Kontakt mig på mail:</p>
                 <a href="mailto:Anko0004@stud.kea.dk">Anko0004@stud.kea.dk</a>
             </div>
 
-            <div class="telefon">
-                <p>Kontakt mig på telefon:</p>
-                <a href="tel:+4571204547">+4571204547</a>
+            <div class="instagram">
+                <a href="https://www.instagram.com/lagenzycph/">+4571204547</a>
             </div>
-
-            <div class="sociale_medier">
-                <p> Sociale medier:</p>
-                <p> <a href="http://instagram.com/_u/">Instagram</a>
-                </p>
-                <p> <a href="https://www.facebook.com/profile">Facebook</a> </p>
-                <p> <a href="https://www.linkedin.com/feed/">Linkedin</a> </p>
-            </div>
-        </div>
-
-        <div class="logo_footer">
-            <a href="index.html">Ap</a>
         </div>
 
     </footer>

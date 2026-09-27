@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.get_in_touch {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 1.5rem;
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  font-size: 9vw;
+  color: var(--d_grey);
+}
+
+.a_link {
+  display: block;
+  text-align: center;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-size: 6vw;
+  margin-bottom: 1rem;
+  color: var(--d_grey);
+}

@@ -7,20 +7,6 @@ img {
 }
 /*************** Reset ************/
 
-/* H3 - services */
-.services_overskirft {
-  margin-top: 5rem;
-}
-
-@media (min-width: 750px) {
-  .h3_services {
-    margin: 0 auto;
-    margin-top: 4.5rem;
-    margin-bottom: 0.5rem;
-  }
-}
-/* H3 - services */
-
 /*******services grid*******/
 
 /* Billederne skal fylde hele containeren uden at blive forvrænget */
@@ -34,43 +20,92 @@ img {
 }
 
 /*****Grid services*****/
+
+.grid_text,
+.grid_text_4,
+.grid_text_2 h3 {
+  margin-top: 5rem; /* Tilføj luft over h3 på mobil */
+}
+
+.grid_text,
+.grid_text_4,
+.grid_text_2 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 850px) {
+  .grid_text,
+  .grid_text_4,
+  .grid_text_2 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
+/* Fjern margin-top på større skærme */
+@media (min-width: 850px) {
+  .grid_text,
+  .grid_text_4,
+  .grid_text_2 h3 {
+    margin-top: 0; /* Fjerner ekstra afstand på desktop */
+  }
+}
 /*Services1*/
-@media (min-width: 750px) {
+@media (min-width: 850px) {
   .grid_services1 {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
-    gap: 30px;
+    grid-template-columns: 1fr 1fr; /* To kolonner */
     margin: 0 auto;
+    align-items: center; /* Centrerer tekst vertikalt */
   }
 }
 
 /*Services2*/
-@media (min-width: 750px) {
+@media (min-width: 850px) {
   .grid_services2 {
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
-    gap: 30px;
     margin: 0 auto;
+    align-items: center; /* Centrerer tekst vertikalt */
+  }
+
+  /* Bytter rækkefølgen i computer size */
+  .grid_text_2 {
+    order: 2; /* Flytter teksten til kolonne 2 */
+  }
+
+  .grid_services2 img {
+    order: 1; /* Flytter billedet til kolonne 1 */
   }
 }
 
 /*Services3*/
-@media (min-width: 750px) {
+@media (min-width: 850px) {
   .grid_services3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
     margin: 0 auto;
+    align-items: center; /* Centrerer tekst vertikalt */
   }
 }
 
 /*Services4*/
-@media (min-width: 750px) {
+@media (min-width: 850px) {
   .grid_services4 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
     margin: 0 auto;
+    align-items: center; /* Centrerer tekst vertikalt */
+  }
+
+  /* Bytter rækkefølgen i computer size */
+  .grid_text_4 {
+    order: 2; /* Flytter teksten til kolonne 2 */
+  }
+
+  .grid_services4 img {
+    order: 1; /* Flytter billedet til kolonne 1 */
   }
 }
 

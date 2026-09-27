@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="services.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -23,19 +23,26 @@
 
 <body>
     <header>
-
         <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img_lagenzy/logo.webp" alt="LAGENZY logo">
+                </a>
+            </div>
+
             <ul class="menu">
                 <li><a href="index.html">HJEM</a></li>
                 <li><a href="services.html">SERVICES</a></li>
                 <li><a href="cases.html">CASES</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
-                <li class="logo"><a href="index.html">LAGENZY</a></li>
-
             </ul>
+            <div class="burger-menu" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
+
+
+
 
     <div class="hero_image">
         <img src="img_lagenzy/thumbnail_IMG_7467.webp" alt="hero">
@@ -55,49 +62,50 @@
     </div>
 
     <main>
-
-        <div>
-            <h2>SERVICES</h2>
-            <p class="service_p">We offer tailored creative solutions with a holistic approach, deeply understanding
-                your
-                brand's DNA and values. With a sharp aesthetic eye and respect for your budget and needs,
-                we ensure top quality results at fair prices.</p>
-        </div>
-
-        <div class="grid_1-1">
-            <div class="billede_collage">
-                <a href="services.html#services1"> <!-- Linker til tema2 på portfolio-siden -->
-                    <img src="img_lagenzy/billede_collage_1.webp" alt="tema2">
-                </a>
-                <div class="text_overlay">
-                    CREATIVE DEVELOPMENT
-                </div>
+        <div class="services">
+            <div>
+                <h2>SERVICES</h2>
+                <p class="service_p">We offer tailored creative solutions with a holistic approach, deeply understanding
+                    your
+                    brand's DNA and values. With a sharp aesthetic eye and respect for your budget and needs,
+                    we ensure top quality results at fair prices.</p>
             </div>
 
-            <div class="billede_collage">
-                <a href="services.html#services2">
-                    <img src="img_lagenzy/billede_collage_2.webp" alt="tema3">
-                </a>
-                <div class="text_overlay">
-                    BRANDING STRATEGY
+            <div class="grid_1-1">
+                <div class="billede_collage">
+                    <a href="services.html#services1"> <!-- Linker til tema2 på portfolio-siden -->
+                        <img src="img_lagenzy/billede_collage_1.webp" alt="tema2">
+                    </a>
+                    <div class="text_overlay">
+                        CREATIVE DEVELOPMENT
+                    </div>
                 </div>
-            </div>
 
-            <div class="billede_collage">
-                <a href="services.html#services3">
-                    <img src="img_lagenzy/billede_collage_3.webp" alt="tema4">
-                </a>
-                <div class="text_overlay">
-                    BRAND ACTIVATIONS
+                <div class="billede_collage">
+                    <a href="services.html#services2">
+                        <img src="img_lagenzy/billede_collage_2.webp" alt="tema3">
+                    </a>
+                    <div class="text_overlay">
+                        BRANDING STRATEGY
+                    </div>
                 </div>
-            </div>
 
-            <div class="billede_collage">
-                <a href="services.html#services4">
-                    <img src="img_lagenzy/billede_collage_4.webp" alt="tema5">
-                </a>
-                <div class="text_overlay">
-                    CONSULTING
+                <div class="billede_collage">
+                    <a href="services.html#services3">
+                        <img src="img_lagenzy/billede_collage_3.webp" alt="tema4">
+                    </a>
+                    <div class="text_overlay">
+                        BRAND ACTIVATIONS
+                    </div>
+                </div>
+
+                <div class="billede_collage">
+                    <a href="services.html#services4">
+                        <img src="img_lagenzy/billede_collage_4.webp" alt="tema5">
+                    </a>
+                    <div class="text_overlay">
+                        CONSULTING
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,25 +114,18 @@
 
     <footer>
         <div class="grid_1-1-1_footer">
+
+            <div class="linkedin">
+                <a href="https://www.linkedin.com/feed/">Linkedin</a>
+            </div>
             <div class="mail">
-                <p>Kontakt mig på mail:</p>
                 <a href="mailto:Anko0004@stud.kea.dk">Anko0004@stud.kea.dk</a>
             </div>
 
-            <div class="telefon">
-                <p>Kontakt mig på telefon:</p>
-                <a href="tel:+4571204547">+4571204547</a>
-            </div>
-
-            <div class="sociale_medier">
-                <p> Sociale medier:</p>
-                <p> <a href="http://instagram.com/_u/">Instagram</a>
-                </p>
-                <p> <a href="https://www.facebook.com/profile">Facebook</a> </p>
-                <p> <a href="https://www.linkedin.com/feed/">Linkedin</a> </p>
+            <div class="instagram">
+                <a href="https://www.instagram.com/lagenzycph/">+4571204547</a>
             </div>
         </div>
-
 
     </footer>
     <script src="script.js"></script>

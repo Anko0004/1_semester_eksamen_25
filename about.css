@@ -7,144 +7,72 @@ img {
 }
 /*************** Reset ************/
 
-/***Håndskrift font****/
-.haandskrift_2 {
-  font-family: "League Script", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
-}
-/***Håndskrift font****/
-
 /**** Hvem er jeg grid****/
-@media (min-width: 750px) {
-  .grid_om_mig_2 {
+.about_text h2 {
+  margin-top: 0;
+}
+
+.grid_about {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 900px) {
+  .grid_about {
     display: grid;
     grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
-    gap: 30px;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    max-width: 900px;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    gap: 30px;
+    align-items: center; /* Centrerer tekst vertikalt */
   }
 }
+
+/* Grid Lulu Alva */
+@media (min-width: 900px) {
+  .grid_about_lulu {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
+    margin: 0 auto;
+    align-items: center; /* Centrerer tekst vertikalt */
+  }
+}
+
+/* Bytter rækkefølgen i computer size */
+.lulu_text {
+  order: 2; /* Flytter teksten til kolonne 1 */
+}
+
+.grid_about_lulu img {
+  order: 1; /* Flytter billedet til kolonne 2 */
+}
+
+@media (min-width: 900px) {
+  .grid_about_alva {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
+    margin: 0 auto;
+    align-items: center; /* Centrerer tekst vertikalt */
+  }
+}
+
+.alva_text,
+.lulu_text {
+  margin-top: 5rem; /* Tilføj luft over h3 på mobil */
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Fjern margin-top på større skærme */
+@media (min-width: 900px) {
+  .alva_text,
+  .lulu_text {
+    margin-top: 0; /* Fjerner ekstra afstand på desktop */
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+
 /**** Hvem er jeg****/
-
-/*******CV********/
-.cv_h2 {
-  margin: 0 auto; /* Centerer indholdet */
-  padding-left: 5rem;
-  padding-right: 5rem;
-  max-width: 900px;
-  margin-top: 7rem;
-}
-
-/*** CV skrift***/
-.cv li {
-  font-family: "Roboto", serif;
-  font-weight: 200;
-  font-size: 0.9rem; /*Jeg har valgt lidt mindre skrift, da det visuelt er pænere*/
-  color: var(--d_grey);
-  line-height: 1.5; /* Gør linjehøjden som i afsnit */
-}
-/*** CV skrift***/
-
-/***CV grid***/
-.cv {
-  margin: 0 auto; /* Centerer indholdet */
-  padding: 3rem 2rem;
-  border: 1px solid var(--d_grey); /* Tilføjer en firkantet kant */
-  box-sizing: border-box; /* Inkluderer padding og border i elementets samlede bredde/højde */
-  max-width: 900px;
-}
-
-@media (min-width: 750px) {
-  .cv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
-    gap: 40px;
-    align-items: start; /* Justerer indholdet til starten af hver kolonne */
-    padding: 3rem 5rem;
-  }
-}
-/***CV grid***/
-/*******CV********/
-
-/*********billede collage*****/
-/****mobil site***/
-.grid_om_mig_3 {
-  display: grid;
-  margin-top: 5rem;
-  gap: 30px;
-  grid-template-columns: 1fr;
-}
-/****mobil site***/
-@media (min-width: 750px) {
-  .grid_om_mig_3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* To kolonner: en til tekst og en til billede */
-    gap: 30px;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 7rem;
-  }
-}
-/*********Tape*********/
-.billede_wrapper {
-  position: relative; /* For at tape-billederne kan placeres absolut i forhold til dette element */
-}
-
-.billede_wrapper img {
-  height: auto;
-}
-
-.tape1 {
-  position: absolute;
-  top: 1%; /* Juster efter behov */
-  left: -13%; /* Juster efter behov */
-  width: 47%; /* Størrelse af tape-billederne */
-  height: auto;
-  transform: rotate(141deg);
-}
-
-.tape2 {
-  position: absolute;
-  top: -4%; /* Juster efter behov */
-  left: 26%; /* Juster efter behov */
-  width: 47%; /* Størrelse af tape-billederne */
-  height: auto;
-}
-/*********Tape*********/
-/*********billede collage*****/
-
-/****Programmer grid******/
-.programmer_about {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
-  text-align: center;
-}
-
-.grid_programmer {
-  margin-top: 2rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.grid_programmer img {
-  max-width: 60px;
-  height: 60px;
-  object-fit: contain; /* Sikrer, at billedet bevarer sine proportioner inden for boksen */
-}
-
-@media (min-width: 750px) {
-  .grid_programmer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
-    gap: 40px;
-    align-items: start; /* Justerer indholdet til starten af hver kolonne */
-  }
-}
-/****Programmer grid******/

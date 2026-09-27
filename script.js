@@ -13,3 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function toggleMenu() {
+  document.querySelector(".menu").classList.toggle("show");
+}
